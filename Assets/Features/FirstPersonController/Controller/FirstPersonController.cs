@@ -42,13 +42,12 @@ public class FirstPersonController : MonoBehaviour
             .Subscribe(input =>
             {
                 var horizontalLook = input.x * Vector3.up * Time.deltaTime;
-                transform.localRotation *= Quaternion.Euler(horizontalLook);
+                _characterController.transform.localRotation *= Quaternion.Euler(horizontalLook);
 
                 var verticalLook = input.y * Vector3.left * Time.deltaTime;
                 var newQuaternion = _camera.transform.localRotation * Quaternion.Euler(verticalLook);
-                _camera.transform.localRotation = //RotationTools.ClampRotationAroundXAxis(
-                                                  newQuaternion;
-                                                  //, -maxViewAngle, -maxViewAngle);
+                _camera.transform.localRotation = RotationTools.ClampRotationAroundXAxis(
+                                                  newQuaternion, -maxViewAngle, -minViewAngle);
             }).AddTo(this);
     }
 
