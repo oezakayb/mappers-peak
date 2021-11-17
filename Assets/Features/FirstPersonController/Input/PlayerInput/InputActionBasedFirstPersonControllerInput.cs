@@ -4,47 +4,54 @@ using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 
 public class InputActionBasedFirstPersonControllerInput : FirstPersonControllerInput
 {
-    [SerializeField] private FirstPersonInputAction fpia;
+    private FirstPersonInputAction controls;
+    private IObservable<Vector2> _move;
+    private IObservable<Vector2> _look;
+    Vector2 _smoothLookValue;
+    public float lookSmoothingFactor;
 
     private void Awake()
     {
-        fpia = new FirstPersonInputAction();
+        controls = new FirstPersonInputAction();
+        _move = this.UpdateAsObservable()
+            .Select(_=>
+            {
+                return controls.Character.Move.ReadValue<Vector2>();
+            });
+
+        _look = this.UpdateAsObservable()
+            .Select(_=>
+            {
+                Vector2 rawLookValue = controls.Character.Look.ReadValue<Vector2>();
+                
+                _smoothLookValue.x = Mathf.Lerp(_smoothLookValue.x, rawLookValue.x, lookSmoothingFactor * Time.deltaTime);
+                _smoothLookValue.y = Mathf.Lerp(_smoothLookValue.y, rawLookValue.y, lookSmoothingFactor * Time.deltaTime);
+                return _smoothLookValue;
+            });
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        _move = this.UpdateAsObservable()
-            .Select(_=> fpia.Character.Move.ReadValue<Vector2>());
     }
 
     private void OnEnable()
     {
-        fpia.Enable();
+        controls?.Enable();
     }
 
     private void OnDisable()
     {
-        fpia.Disable();
+        controls?.Disable();
     }
+    
+    public override IObservable<Vector2> Move => _move;
 
-    private IObservable<Vector2> _move;
+    public override IObservable<Unit> Jump => null;
 
-    public override IObservable<Vector2> Move
-    {
-        get { return _move; }
-    }
-    public override IObservable<Unit> Jump
-    {
-        get { return null; }
-    }
-    public override ReadOnlyReactiveProperty<bool> Run
-    {
-        get { return null; }
-    }
-    public override IObservable<Vector2> Look
-    {
-        get { return null; }
-    }
+    public override ReadOnlyReactiveProperty<bool> Run => null;
+
+    public override IObservable<Vector2> Look => _look;
 }
