@@ -9,25 +9,27 @@ using UnityEngine.InputSystem;
 
 public class InputActionBasedFirstPersonControllerInput : FirstPersonControllerInput
 {
-    private FirstPersonInputAction controls;
+    private FirstPersonInputAction _controls;
     private IObservable<Vector2> _move;
     private IObservable<Vector2> _look;
+    private ReadOnlyReactiveProperty<bool> _run;
+    private Subject<Unit> _jump = new Subject<Unit>();
     Vector2 _smoothLookValue;
     public float lookSmoothingFactor;
 
     private void Awake()
     {
-        controls = new FirstPersonInputAction();
+        _controls = new FirstPersonInputAction();
         _move = this.UpdateAsObservable()
             .Select(_=>
             {
-                return controls.Character.Move.ReadValue<Vector2>();
+                return _controls.Character.Move.ReadValue<Vector2>();
             });
 
         _look = this.UpdateAsObservable()
             .Select(_=>
             {
-                Vector2 rawLookValue = controls.Character.Look.ReadValue<Vector2>();
+                Vector2 rawLookValue = _controls.Character.Look.ReadValue<Vector2>();
                 
                 _smoothLookValue.x = Mathf.Lerp(_smoothLookValue.x, rawLookValue.x, lookSmoothingFactor * Time.deltaTime);
                 _smoothLookValue.y = Mathf.Lerp(_smoothLookValue.y, rawLookValue.y, lookSmoothingFactor * Time.deltaTime);
@@ -35,23 +37,30 @@ public class InputActionBasedFirstPersonControllerInput : FirstPersonControllerI
             });
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        _run = this.UpdateAsObservable()
+            .Select(_ => _controls.Character.Run.ReadValueAsObject() != null)
+            .ToReadOnlyReactiveProperty();
+
+        _controls.Character.Jump.performed += context => { _jump.OnNext(Unit.Default); };
+
     }
 
     private void OnEnable()
     {
-        controls?.Enable();
+        _controls?.Enable();
     }
 
     private void OnDisable()
     {
-        controls?.Disable();
+        _controls?.Disable();
     }
     
     public override IObservable<Vector2> Move => _move;
 
-    public override IObservable<Unit> Jump => null;
+    public override IObservable<Unit> Jump => _jump;
 
-    public override ReadOnlyReactiveProperty<bool> Run => null;
+    public override ReadOnlyReactiveProperty<bool> Run => _run;
 
     public override IObservable<Vector2> Look => _look;
 }
