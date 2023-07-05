@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c824d612-4812-45d3-ada0-129f334f8790" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Audio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep00.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep00.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep01.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep01.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep02.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep02.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep03.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep03.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep04.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep04.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep05.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep05.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep06.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep06.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep07.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep07.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep08.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep08.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep09.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Audio/footstep09.ogg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Camera/Scripts/CameraBob.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Camera/Scripts/CameraBob.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstPersonController/Effects/PlayerAudio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstPersonController/Effects/PlayerAudio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBar.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBar.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBar.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBar.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBarCanvas.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBarCanvas.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBarElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/CompassBarElement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/marker-texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/CompassBar/marker-texture.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/GiantArrowCompass.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/GiantArrowCompass/Compass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/GiantArrowCompass/Compass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/GiantArrowCompass/GiantArrowCompass.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/GiantArrowCompass/GiantArrowCompass.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/GiantArrowCompass/GiantArrowCompass.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/GiantArrowCompass/GiantArrowCompass.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/HologramPath.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/HologramPath/HologramPath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/HologramPath/HologramPath.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/HologramPath/HologramPath.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/HologramPath/HologramPath.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/HologramPath/Marker.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/HologramPath/Marker.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/Target.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wayfinding-cues-boilerplate-code/Target.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep00.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep01.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep02.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep03.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep04.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep05.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep06.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep07.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep08.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../footstep09.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstPersonController/Controller/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPersonController/Controller/FirstPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstPersonController/Input/PlayerInput/FirstPersonInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPersonController/Input/PlayerInput/FirstPersonInputAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstPersonController/Input/PlayerInput/FirstPersonInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPersonController/Input/PlayerInput/FirstPersonInputAction.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FirstPersonController/Input/PlayerInput/InputActionBasedFirstPersonControllerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FirstPersonController/Input/PlayerInput/InputActionBasedFirstPersonControllerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/CloudyPeak/CloudyPeak.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/CloudyPeak/CloudyPeak.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/CloudyPeak/CloudyPeak/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/CloudyPeak/CloudyPeak/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/CloudyPeak/CloudyPeak/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/CloudyPeak/CloudyPeak/NavMesh.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2S9exmabKhoDK5Ey4WcUVB544JO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c824d612-4812-45d3-ada0-129f334f8790" name="Changes" comment="" />
+      <created>1688563474770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688563474770</updated>
+      <workItem from="1688563476727" duration="184000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
