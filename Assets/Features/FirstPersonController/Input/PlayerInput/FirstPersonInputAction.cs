@@ -44,7 +44,6 @@ public partial class @FirstPersonInputAction: IInputActionCollection2, IDisposab
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-
                 },
                 {
                     ""name"": ""Run"",
@@ -52,7 +51,8 @@ public partial class @FirstPersonInputAction: IInputActionCollection2, IDisposab
                     ""id"": ""a16799e2-0aa4-49f1-9d19-3dda638f4241"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 },
                 {
                     ""name"": ""Jump"",
@@ -60,7 +60,8 @@ public partial class @FirstPersonInputAction: IInputActionCollection2, IDisposab
                     ""id"": ""507405d5-3a27-4e71-9cf0-eac09466281f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -433,6 +434,12 @@ public partial class @FirstPersonInputAction: IInputActionCollection2, IDisposab
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Run.started += instance.OnRun;
+            @Run.performed += instance.OnRun;
+            @Run.canceled += instance.OnRun;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
         }
 
         private void UnregisterCallbacks(ICharacterActions instance)
@@ -443,6 +450,12 @@ public partial class @FirstPersonInputAction: IInputActionCollection2, IDisposab
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Run.started -= instance.OnRun;
+            @Run.performed -= instance.OnRun;
+            @Run.canceled -= instance.OnRun;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
         }
 
         public void RemoveCallbacks(ICharacterActions instance)
@@ -457,21 +470,6 @@ public partial class @FirstPersonInputAction: IInputActionCollection2, IDisposab
                 UnregisterCallbacks(item);
             m_Wrapper.m_CharacterActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
-            if (m_Wrapper.m_CharacterActionsCallbackInterface != null)
-            {
-                @Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                @Look.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnLook;
-                @Run.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
-                @Run.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
-                @Run.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
-                @Jump.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
-            }
         }
     }
     public CharacterActions @Character => new CharacterActions(this);
